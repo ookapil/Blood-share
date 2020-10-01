@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Leaflet</title>
+	<!-- <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
+	<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script> -->
+	<link rel="stylesheet" href="{% static 'leaflet/leaflet.css'%}" />
+	<script src="{% static 'leaflet/leaflet.js'%}"></script>
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+	<link rel="stylesheet" href="{% static 'leaflet_routing/dist/leaflet.css' %}" />
+	<link rel="stylesheet" href="{% static 'leaflet_routing/dist/leaflet-routing-machine.css' %}" />
+	<script src="{% static 'leaflet_routing/dist/leaflet.js' %}"></script>
+	<script src="{% static 'leaflet_routing/dist/leaflet-routing-machine.js' %}"></script>
+</head>
+<body>
+	<h3>Leaflet map</h3>
+	<button type='submit' onclick='geolocation()' >Get Location</button>
+	<p id='position'>GEt your position here</p>
+	<div id="demo"></div>
+	<style type="text/css">
+		#demo{
+			width: 100%;
+			height:90vh;
+		}
+	</style>
+
+<!-- for getting geolocation -->
+	
+
+	<script type="text/javascript">
+	function geolocation(){
+		getlocation()
+	}
+	</script>
+
+	<script src="{% static 'geo/geo_leaflet.js' %}"> </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+	{% block content %}
+	<link rel="stylesheet" href="{% static 'css/search.css' %}">
+	<div class="result">
+		<h3>Contact the respective doner<h3>
+		{% for m in match %}
+			<strong>Name :</strong>{{m.name}}<br>
+			<button type="button" class="btn btn-primary"><a href="#"></a>Contact</button>
+			<strong>Contact :</strong>{{m.contact}}<br>
+			<strong>Blood group :</strong>{{m.bloodgroup}}
+			<hr>
+		{% endfor %}
+	</div>
+	{% endblock %}
+</body>
+</html>
+
